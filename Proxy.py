@@ -190,6 +190,8 @@ while True:
 
       # Send the response to the client
       # ~~~~ INSERT CODE ~~~~
+      # response to client
+      clientSocket.sendall(response_bytes)
       # ~~~~ END CODE INSERT ~~~~
 
       # Create a new file in the cache for the requested file.
