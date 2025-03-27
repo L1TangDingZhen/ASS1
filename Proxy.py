@@ -178,6 +178,14 @@ while True:
 
       # Get the response from the origin server
       # ~~~~ INSERT CODE ~~~~
+      # response origin
+      response_bytes = b""
+      while True:
+        data = originServerSocket.recv(BUFFER_SIZE)
+        if len(data) == 0:
+          break
+        else:
+          response_bytes += data
       # ~~~~ END CODE INSERT ~~~~
 
       # Send the response to the client
